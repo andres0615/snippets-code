@@ -1,0 +1,29 @@
+{
+	"PHP Try-Catch JSON Response": {
+		"prefix": "l-try",
+		"description": "Try-catch con respuesta JSON de error 500",
+		"body": [
+			"try {",
+			"\t$0",
+			"} catch (\\\\Exception \\$e) {",
+			"\t// Si hay errores generales",
+			"\t\\$errorMessage = '${1:Error al crear el producto}: ' . \\$e->getMessage();",
+			"\t",
+			"\treturn response()->json([",
+			"\t\t'success' => false,",
+			"\t\t'message' => \\$errorMessage,",
+			"\t], 500);",
+			"}"
+		]
+	},
+	"PHP function": {
+		"prefix": "p-function",
+		"description": "PHP function",
+		"body": [
+			"public function ${1:index}()",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+}
